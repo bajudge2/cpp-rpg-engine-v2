@@ -131,8 +131,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="..\..\src\Battle\Monster.cpp" />
+    <ClCompile Include="..\..\src\Battle\Move.cpp" />
+    <ClCompile Include="..\..\src\Battle\Type.cpp" />
     <ClCompile Include="..\..\src\Core\Game.cpp" />
     <ClCompile Include="..\..\src\Core\StateManager.cpp" />
+    <ClCompile Include="..\..\src\Entities\Entity.cpp" />
+    <ClCompile Include="..\..\src\Entities\Player.cpp" />
     <ClCompile Include="..\..\src\main.cpp" />
     <ClCompile Include="..\..\src\States\BattleState.cpp" />
     <ClCompile Include="..\..\src\States\MapState.cpp" />
@@ -140,8 +145,13 @@
     <ClCompile Include="..\..\src\States\State.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\..\include\Battle\Monster.hpp" />
+    <ClInclude Include="..\..\include\Battle\Move.hpp" />
+    <ClInclude Include="..\..\include\Battle\Type.hpp" />
     <ClInclude Include="..\..\include\Core\Game.hpp" />
     <ClInclude Include="..\..\include\Core\StateManager.hpp" />
+    <ClInclude Include="..\..\include\Entities\Entity.hpp" />
+    <ClInclude Include="..\..\include\Entities\Player.hpp" />
     <ClInclude Include="..\..\include\States\BattleState.hpp" />
     <ClInclude Include="..\..\include\States\MapState.hpp" />
     <ClInclude Include="..\..\include\States\MenuState.hpp" />

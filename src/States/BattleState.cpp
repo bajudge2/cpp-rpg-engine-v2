@@ -34,6 +34,10 @@ void BattleState::update() {
 		break;
 	case 3:
 		std::exit(1);
+	default:
+		std::cout << "Please enter a number, 1-3.\n";
+		break;
+
 	}
 }
 

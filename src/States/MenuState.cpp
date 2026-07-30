@@ -29,11 +29,15 @@ void MenuState::update() {
 	case 2:
 		std::cout << "Going to battle...\n";
 
+
 		// request a switch from the statemanager
 		manager->switchState(new BattleState(manager));
 		break;
 	case 3:
 		std::exit(1);
+	default:
+		std::cout << "Please enter a number, 1-3.\n";
+		break;
 	}
 
 }

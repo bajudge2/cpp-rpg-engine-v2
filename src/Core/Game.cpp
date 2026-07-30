@@ -15,7 +15,7 @@ Game::~Game() {
 
 void Game::run() {
 	isRunning = true;
-	while (isRunning = true) {
+	while (isRunning) {
 		stateManager.render();
 		stateManager.update();
 	}
