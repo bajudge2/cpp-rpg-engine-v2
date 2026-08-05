@@ -1,5 +1,4 @@
 #include "Battle/Type.hpp"
-
 // Type chart array
 
 /* Type chart is as follows:
@@ -23,4 +22,24 @@ double typeChart[TYPE_COUNT][TYPE_COUNT] = {
 
 double getEffectiveness(Type attackType, Type defenderType) {
     return typeChart[(int)attackType][(int)defenderType];
+}
+
+std::string typeToString(Type t) {
+    switch (t) {
+    case Type::Fire:
+        return "Fire";
+        break;
+    case Type::Water:
+        return "Water";
+        break;
+    case Type::Grass:
+        return "Grass";
+        break;
+    case Type::Electric:
+        return "Electric";
+        break;
+    case Type::Normal:
+        return "Normal";
+        break;
+    }
 }

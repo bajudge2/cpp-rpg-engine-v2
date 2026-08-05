@@ -1,6 +1,6 @@
 #ifndef TYPE_HPP
 #define TYPE_HPP
-
+#include <string>
 enum class Type {
     Fire,
     Water,
@@ -14,5 +14,8 @@ constexpr int TYPE_COUNT = static_cast<int>(Type::COUNT);
 
 // Declaration only
 double getEffectiveness(Type attackType, Type defenderType);
+
+// used for printing type
+std::string typeToString(Type t);
 
 #endif
