@@ -35,6 +35,10 @@ Type Monster::getType() const {
 std::vector<Move> Monster::getMoveset() const {
 	return moveset;
 }
+const Move& Monster::getMove(int index) const {
+	return moveset[index];
+}
+
 
 void Monster::takeDamage(int dmg) {
 	std::cout << name << "took  " << dmg << " damage!\n";
@@ -63,6 +67,20 @@ bool Monster::isAlive() const {
 
 	return false;
 }
+
+
+void Monster::addMove(Move move) {
+	if (moveset.size() < MAX_MOVES) {
+		moveset.push_back(move);
+	}
+	else {
+		std::cout << "PLACEHOLDER FOR REPLACING MOVE\n";
+		// eventually call a replaceMove function? or prompt and have a removeMove func
+	}
+}
+
+
+
 void Monster::printStats() const {
 	std::cout << name << "'s stats:\n";
 	std::cout << "Max Health: " << maxHealth << std::endl;
@@ -75,9 +93,12 @@ void Monster::printStats() const {
 }
 
 void Monster::printMoves() const {
-	std::cout << name << "'s moves:\n";
+	std::cout << name << "'s moves:\n\n";
 	for (int i = 0; i < moveset.size(); i++) {
-		std::cout << i + 1 << ": " << moveset[i].getName() << std::endl;
+		std::cout << i + 1 << ": " << moveset[i].getName() << " (" << typeToString(moveset[i].getType()) << ") " << std::endl;
+		std::cout << "Power: " << moveset[i].getPower() << std::endl;
+		std::cout << "Accuracy: " << moveset[i].getAccuracy() << std::endl;
+		std::cout << "PP: " << moveset[i].getCurrentUses() << "/" << moveset[i].getMaxUses() << std::endl << std::endl;
 	}
 	return;
 }

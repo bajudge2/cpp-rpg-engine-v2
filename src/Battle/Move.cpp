@@ -25,3 +25,14 @@ Type Move::getType() const {
 std::string Move::getName() const {
 	return name;
 }
+
+
+// functions relating to checking and reducing pp
+bool Move::hasUsesLeft() const {
+	return currentUses > 0;
+}
+void Move::use() {
+	if (currentUses > 0) {
+		currentUses--;
+	}
+}

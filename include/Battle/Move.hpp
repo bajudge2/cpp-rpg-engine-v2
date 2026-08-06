@@ -18,6 +18,9 @@ public:
 	int getMaxUses() const;
 	Type getType() const;
 	std::string getName() const;
+
+	bool hasUsesLeft() const;
+	void use();
 };
 
 #endif

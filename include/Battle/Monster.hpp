@@ -5,6 +5,10 @@
 #include <string>
 #include <vector>
 
+
+constexpr int MAX_MOVES = 4;
+
+
 class Monster {
 private:
 	std::string name;
@@ -29,13 +33,14 @@ public:
 	int getLevel() const;
 	Type getType() const;
 	std::vector<Move> getMoveset() const;
+	const Move& getMove(int index) const;
 
 
 
 	void takeDamage(int dmg);
 	void heal(int h);
 	bool isAlive() const;
-	//void addMove(Move)		START HERE TMRW
+	void addMove(Move move);
 	void printStats() const;
 	void printMoves() const;
 };

@@ -23,14 +23,14 @@ int main() {
 
 	Move tackle("Tackle", 50, 100, 10, 10, Type::Normal);
 
-	moveset_m1.push_back(tackle);
-	moveset_m1.push_back(tackle);
-	moveset_m1.push_back(tackle);
-	moveset_m1.push_back(tackle);
+
 	Monster m1("TEST", 100, 100, 10, 10, 10, 5, Type::Fire);
 
 	
-
+	m1.addMove(tackle);
+	m1.addMove(tackle);
+	m1.addMove(tackle);
+	m1.addMove(tackle);
 
 
 	// testing
