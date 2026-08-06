@@ -3,6 +3,7 @@
 #include "Battle/Type.hpp"
 class Move {
 private:
+	std::string name;
 	int power;
 	int accuracy;
 	int currentUses;
@@ -10,12 +11,13 @@ private:
 	Type type;
 	
 public:
-	Move(int power, int accuracy, int currentUses, int maxUses, Type type);
+	Move(std::string name, int power, int accuracy, int currentUses, int maxUses, Type type);
 	int getPower() const;
 	int getAccuracy() const;
 	int getCurrentUses() const;
 	int getMaxUses() const;
 	Type getType() const;
+	std::string getName() const;
 };
 
 #endif

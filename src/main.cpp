@@ -1,4 +1,5 @@
 #include <iostream>
+#include <vector>
 #include "Core/Game.hpp"
 #include "Core/StateManager.hpp"
 #include "States/State.hpp"
@@ -17,10 +18,24 @@ int main() {
 	Game g1;
 
 	// g1.run();
+	std::vector<Move> moveset_m1;
 
+
+	Move tackle("Tackle", 50, 100, 10, 10, Type::Normal);
+
+	moveset_m1.push_back(tackle);
+	moveset_m1.push_back(tackle);
+	moveset_m1.push_back(tackle);
+	moveset_m1.push_back(tackle);
 	Monster m1("TEST", 100, 100, 10, 10, 10, 5, Type::Fire);
 
+	
+
+
+
+	// testing
 	m1.printStats();
+	m1.printMoves();
 
 	return 0;
 }

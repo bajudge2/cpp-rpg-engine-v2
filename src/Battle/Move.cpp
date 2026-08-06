@@ -2,8 +2,8 @@
 #include <iostream>
 
 
-Move::Move(int power, int accuracy, int currentUses, int maxUses, Type type) :
-	power(power), accuracy(accuracy), currentUses(currentUses), maxUses(maxUses), type(type) {
+Move::Move(std::string name, int power, int accuracy, int currentUses, int maxUses, Type type) :
+	name(name), power(power), accuracy(accuracy), currentUses(currentUses), maxUses(maxUses), type(type) {
 	std::cout << "Move constructor called!\n";
 }
 
@@ -21,4 +21,7 @@ int Move::getMaxUses() const {
 }
 Type Move::getType() const {
 	return type;
+}
+std::string Move::getName() const {
+	return name;
 }

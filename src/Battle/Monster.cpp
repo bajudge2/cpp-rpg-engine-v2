@@ -32,6 +32,9 @@ int Monster::getLevel() const {
 Type Monster::getType() const {
 	return type;
 }
+std::vector<Move> Monster::getMoveset() const {
+	return moveset;
+}
 
 void Monster::takeDamage(int dmg) {
 	std::cout << name << "took  " << dmg << " damage!\n";
@@ -69,4 +72,12 @@ void Monster::printStats() const {
 	std::cout << "Speed: " << speed << std::endl;
 	std::cout << "Type: " << typeToString(type) << std::endl;
 	std::cout << "Level: " << level << std::endl;
+}
+
+void Monster::printMoves() const {
+	std::cout << name << "'s moves:\n";
+	for (int i = 0; i < moveset.size(); i++) {
+		std::cout << i + 1 << ": " << moveset[i].getName() << std::endl;
+	}
+	return;
 }
